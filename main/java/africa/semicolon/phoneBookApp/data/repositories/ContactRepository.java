@@ -18,4 +18,6 @@ public interface ContactRepository extends MongoRepository<Contact,String> {
    List<Contact> findContactByMiddleName(String middleName);
 
    Contact findContactByPhoneNumber(String phoneNumber);
+
+
 }

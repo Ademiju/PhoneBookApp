@@ -3,11 +3,9 @@ package africa.semicolon.phoneBookApp.services;
 import africa.semicolon.phoneBookApp.data.models.Contact;
 import africa.semicolon.phoneBookApp.dtos.requests.AddContactRequest;
 import africa.semicolon.phoneBookApp.dtos.responses.AddContactResponse;
-import africa.semicolon.phoneBookApp.dtos.responses.FindContactResponse;
-import org.apache.catalina.LifecycleState;
 
 import java.util.List;
-
+//@Service
 public interface ContactService {
     AddContactResponse saveContact(AddContactRequest newContactRequest);
 
@@ -15,17 +13,15 @@ public interface ContactService {
 
     Contact findContactByPhoneNumber(String phoneNumber);
 
-    List<Contact> findContactByEmailAddress(String emailAddress);
+    Contact findContactByEmailAddress(String emailAddress);
 
-    FindContactResponse findResponseByFirstNameOrLastNameOrMiddleName(String name);
-
-    FindContactResponse findResponseByPhoneNumber(String phoneNumber);
+    List<Contact> findAllContact();
 
     void deleteContactByEmailAddress(String emailAddress);
 
-    void deleteContactByFullName(String firstName, String lastName);
-
-    void deleteContactByFullName(String firstName, String lastName, String middleName);
+    void deleteContactByMobileNumber(String phoneNumber);
 
     void deleteAllContact();
+
+
 }

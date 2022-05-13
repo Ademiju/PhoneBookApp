@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
 @Document("Phonebook")
 public class Contact {
 
@@ -15,7 +16,7 @@ public class Contact {
     private String id;
     @NonNull
     private String firstName;
-    private String LastName;
+    private String lastName;
     private String middleName;
     @NonNull
     private String phoneNumber;
